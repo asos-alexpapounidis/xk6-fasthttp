@@ -1,4 +1,4 @@
-module github.com/domsolutions/xk6-fasthttp
+module github.com/asos-alexpapounidis/xk6-fasthttp
 
 go 1.23
 
