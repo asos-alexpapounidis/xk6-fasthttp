@@ -186,7 +186,8 @@ func (c *Client) setupCachedReq(reqw *RequestWrapper, method string) error {
 
 func (c *Client) setupNewReq(reqw *RequestWrapper, method string) error {
 	reqw.req.SetRequestURI(reqw.Url)
-
+	reqw.req.Header.DisableNormalizing()
+	
 	if reqw.Host != "" {
 		reqw.req.UseHostHeader = true
 		reqw.req.Header.SetHost(reqw.Host)
